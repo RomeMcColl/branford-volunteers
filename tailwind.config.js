@@ -1,12 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}", // Note the addition of the `app` directory.
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        transparent: "transparent",
+        current: "currentColor",
+        branford: {
+          50: "#f0f8ff",
+          100: "#e0f0fe",
+          200: "#bae2fd",
+          300: "#7cccfd",
+          400: "#37b3f9",
+          500: "#0d99ea",
+          600: "#0173bd",
+          700: "#0260a2",
+          800: "#065286",
+          900: "#0c456e",
+          950: "#082c49",
+        },
+      },
+    },
   },
   plugins: [],
 };
