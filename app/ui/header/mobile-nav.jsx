@@ -1,0 +1,42 @@
+"use client";
+
+import { useState } from "react";
+import {
+  Bars3Icon as MenuIcon,
+  XMarkIcon as CloseIcon,
+} from "@heroicons/react/24/outline";
+import NavLinks from "./nav-links";
+
+export default function MobileNav() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen((curr) => !curr);
+  };
+
+  return (
+    <div className="ml-auto bg-inherit md:hidden">
+      <MobileNavBtn onClick={handleClick} isOpen={isOpen} />
+      {isOpen && (
+        <div className="absolute left-0 flex w-full flex-col bg-inherit">
+          <nav className="flex flex-col gap-4 p-2">
+            <NavLinks />
+          </nav>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function MobileNavBtn({ onClick, isOpen }) {
+  return (
+    <button
+      type="button"
+      aria-label="Menu"
+      onClick={onClick}
+      className="w-16 p-2"
+    >
+      {isOpen ? <CloseIcon /> : <MenuIcon />}
+    </button>
+  );
+}
