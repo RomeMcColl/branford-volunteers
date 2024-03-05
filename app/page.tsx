@@ -1,3 +1,9 @@
+import Hero from "./ui/home/hero";
+
 export default function Home() {
-  return <main className="flex-1 bg-yellow-300">This will be the main</main>;
+  return (
+    <main className="flex flex-1">
+      <Hero />
+    </main>
+  );
 }
