@@ -16,12 +16,13 @@ export default function RootLayout({
   // eslint-disable-next-line no-undef
   children: React.ReactNode;
 }>) {
+  const maxWidthPx = 1500;
   return (
     <html lang="en">
       <body
         className={`${inter.className} flex min-h-svh flex-col bg-branford-600`}
       >
-        <Header />
+        <Header maxWidthPx={maxWidthPx} />
         {children}
       </body>
     </html>
