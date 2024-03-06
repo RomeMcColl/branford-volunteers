@@ -5,11 +5,11 @@ import { ChevronDownIcon as DownArrow } from "@heroicons/react/24/outline";
 
 export default function Hero() {
   return (
-    <section className="relative flex h-[92svh] w-full flex-col text-white">
+    <section className="relative flex h-[92svh] w-full flex-col">
       <div className="bg-hero-vert bg-size absolute h-full w-full bg-cover bg-[70%] opacity-[15%] brightness-75 md:hidden" />
       <div className="bg-hero-wide hidden h-96 w-full bg-cover bg-top md:block" />
-      <div className="relative mx-auto flex max-w-[600px] flex-1 flex-col justify-between p-4 pt-10">
-        <h1 className="my-14 flex flex-col flex-wrap items-start gap-2 text-3xl font-medium md:my-0 md:flex-row">
+      <div className="relative mx-auto flex max-w-[600px] flex-1 flex-col justify-between px-4 pt-10">
+        <h1 className="my-14 flex flex-col flex-wrap items-start gap-2 text-4xl font-medium md:my-0 md:flex-row">
           <span>The</span>
           <span className="rounded bg-white px-1 text-red-600">Branford</span>
           <span>volunteer&nbsp;hub</span>
@@ -21,7 +21,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-5 text-center text-xl font-semibold">
           <Link
-            className="flex-grow rounded-lg border-2 border-white px-5 py-3 text-white"
+            className="flex-grow rounded-lg border-2 border-white px-5 py-3"
             href="/"
           >
             Learn More
