@@ -20,6 +20,10 @@ module.exports = {
           950: "#082c49",
         },
       },
+      backgroundImage: {
+        "hero-wide": "url('/volunteers-hero.png')",
+        "hero-vert": "url('/volunteers-vert.png')",
+      },
     },
   },
   plugins: [],

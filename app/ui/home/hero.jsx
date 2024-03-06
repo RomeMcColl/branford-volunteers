@@ -1,30 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronDownIcon as DownArrow } from "@heroicons/react/24/outline";
-import backgroundImg from "@/public/volunteers-vert.png";
-import { useContext } from "react";
-import { MaxWidthContext } from "@/app/utils/max-width-context";
 
 export default function Hero() {
-  const maxWidth = useContext(MaxWidthContext);
   return (
-    <section
-      className={`relative w-full text-white ${maxWidth} h-[92svh] max-h-[1000px]`}
-    >
-      <Image
-        src={backgroundImg}
-        alt="Volunteers unloading boxes."
-        className="absolute top-0 h-full w-full opacity-20"
-      />
-      <div className="relative flex h-full flex-col justify-between p-4">
-        <h1 className="my-14 flex flex-col flex-wrap items-start gap-2 text-3xl font-medium">
+    <section className="relative flex h-[92svh] w-full flex-col text-white">
+      <div className="bg-hero-vert bg-size absolute h-full w-full bg-cover bg-[70%] opacity-[15%] brightness-75 md:hidden" />
+      <div className="bg-hero-wide hidden h-96 w-full bg-cover bg-top md:block" />
+      <div className="relative mx-auto flex max-w-[600px] flex-1 flex-col justify-between p-4 pt-10">
+        <h1 className="my-14 flex flex-col flex-wrap items-start gap-2 text-3xl font-medium md:my-0 md:flex-row">
           <span>The</span>
           <span className="rounded bg-white px-1 text-red-600">Branford</span>
           <span>volunteer&nbsp;hub</span>
         </h1>
-        <p className="text-pretty font-semibold">
+        <p className="text-pretty font-semibold md:self-center">
           With hundreds of organizations in town, <br />
           it can be hard to know where to start. <br />
           We&apos;re here to help you find the perfect fit.
