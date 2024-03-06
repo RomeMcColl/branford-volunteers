@@ -1,6 +1,5 @@
 "use client";
 
-import clsx from "clsx";
 import { useContext } from "react";
 import { MaxWidthContext } from "@/app/utils/max-width-context";
 import DesktopNav from "./desktop-nav";
@@ -14,11 +13,12 @@ export default function Header() {
   const breakpoint = "lg";
   const hideAt = `${breakpoint}:hidden`;
   const displayAt = `${breakpoint}:flex`;
+  const headerHeight = `${breakpoint}:h-20`;
 
   return (
     <header className="bg-branford-600 text-branford-50">
       <div
-        className={clsx(`mx-auto flex min-h-16 justify-between ${maxWidth}`)}
+        className={`mx-auto flex min-h-16 justify-between ${headerHeight} ${maxWidth}`}
       >
         <MobileSearch hideAt={hideAt} />
         <HomeLogo />
