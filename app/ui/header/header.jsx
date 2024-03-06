@@ -1,19 +1,23 @@
+import clsx from "clsx";
 import DesktopNav from "./desktop-nav";
 import HomeLogo from "./home-logo";
 import MobileNav from "./mobile-nav";
 import MobileSearch from "./mobile-search";
 
-export default function Header({ maxWidthPx }) {
+export default function Header({ maxWidth }) {
   const breakpoint = "lg";
+  const hideAt = `${breakpoint}:hidden`;
+  const displayAt = `${breakpoint}:flex`;
+
   return (
     <header className="bg-branford-600 text-branford-50">
       <div
-        className={`mx-auto flex min-h-16 justify-between max-w-[${maxWidthPx}px]`}
+        className={clsx(`mx-auto flex min-h-16 justify-between ${maxWidth}`)}
       >
-        <MobileSearch breakpoint={breakpoint} />
+        <MobileSearch hideAt={hideAt} />
         <HomeLogo />
-        <MobileNav breakpoint={breakpoint} />
-        <DesktopNav breakpoint={breakpoint} />
+        <MobileNav hideAt={hideAt} />
+        <DesktopNav displayAt={displayAt} />
       </div>
     </header>
   );

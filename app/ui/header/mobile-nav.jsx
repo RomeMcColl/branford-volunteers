@@ -7,7 +7,7 @@ import {
 } from "@heroicons/react/24/outline";
 import NavLinks from "./nav-links";
 
-export default function MobileNav({ breakpoint }) {
+export default function MobileNav({ hideAt }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -15,7 +15,7 @@ export default function MobileNav({ breakpoint }) {
   };
 
   return (
-    <div className={`${breakpoint}:hidden`}>
+    <div className={`${hideAt} z-10`}>
       <MobileNavBtn onClick={handleClick} isOpen={isOpen} />
       {isOpen && (
         <div className="absolute left-0 flex w-full flex-col bg-branford-600">
