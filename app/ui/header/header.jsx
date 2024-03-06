@@ -1,10 +1,16 @@
+"use client";
+
 import clsx from "clsx";
+import { useContext } from "react";
+import { MaxWidthContext } from "@/app/utils/max-width-context";
 import DesktopNav from "./desktop-nav";
 import HomeLogo from "./home-logo";
 import MobileNav from "./mobile-nav";
 import MobileSearch from "./mobile-search";
 
-export default function Header({ maxWidth }) {
+export default function Header() {
+  const maxWidth = useContext(MaxWidthContext);
+
   const breakpoint = "lg";
   const hideAt = `${breakpoint}:hidden`;
   const displayAt = `${breakpoint}:flex`;

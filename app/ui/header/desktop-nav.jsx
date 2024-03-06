@@ -1,5 +1,3 @@
-"use client";
-
 import NavLinks from "./nav-links";
 
 export default function DesktopNav({ displayAt }) {

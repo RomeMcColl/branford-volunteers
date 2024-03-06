@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./ui/header/header";
 import Footer from "./ui/footer";
+import MaxWidthProvider from "./utils/max-width-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,15 +18,16 @@ export default function RootLayout({
   // eslint-disable-next-line no-undef
   children: React.ReactNode;
 }>) {
-  const maxWidth = "max-w-[1500px]";
   return (
     <html lang="en">
       <body
         className={`${inter.className} flex min-h-svh flex-col bg-branford-600`}
       >
-        <Header maxWidth={maxWidth} />
-        {children}
-        <Footer />
+        <MaxWidthProvider>
+          <Header />
+          {children}
+          <Footer />
+        </MaxWidthProvider>
       </body>
     </html>
   );
