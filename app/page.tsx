@@ -1,4 +1,5 @@
 import Hero from "./ui/home/hero";
+import SearchBtn from "./ui/search-button";
 
 const categories = [
   "food insecurity",
@@ -41,6 +42,26 @@ export default function Home() {
             ))}
             <li className="">and more...</li>
           </ul>
+        </div>
+      </section>
+      <section className="bg-white p-4 text-branford-600">
+        <div className="flex gap-1 text-5xl font-semibold">
+          <p>&ldquo;</p>
+          <p className="w-52 text-3xl font-medium">
+            Service to others is the rent you pay for your room here on Earth.
+          </p>
+          <p className="self-end">&rdquo;</p>
+        </div>
+        <p className="mt-3 text-right text-2xl font-medium">- Muhammad Ali</p>
+      </section>
+      <section className="flex flex-col items-center justify-evenly gap-8 p-10 font-semibold sm:flex-row">
+        <p>
+          Whether you can give an hour, a day, <br />
+          or a lifetime, find your opportunity <br />
+          to give back to your community.
+        </p>
+        <div className="flex w-72">
+          <SearchBtn />
         </div>
       </section>
     </main>
