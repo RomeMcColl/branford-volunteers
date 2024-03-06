@@ -16,7 +16,7 @@ export default function Header() {
   const headerHeight = `${breakpoint}:h-20`;
 
   return (
-    <header className="bg-branford-600 text-branford-50">
+    <header className="bg-branford-600 text-branford-50 lg:px-3">
       <div
         className={`mx-auto flex min-h-16 justify-between ${headerHeight} ${maxWidth}`}
       >

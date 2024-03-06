@@ -18,7 +18,7 @@ export default function NavLinks() {
         <Link
           key={link.name}
           href={link.href}
-          className={clsx("text-xl", {
+          className={clsx("flex-[0] text-xl xl:flex-initial", {
             "text-red-500": pathname === link.href,
           })}
         >

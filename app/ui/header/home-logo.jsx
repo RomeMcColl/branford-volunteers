@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function HomeLogo() {
   return (
-    <Link href="/" className="flex items-center lg:mx-3">
+    <Link href="/" className="flex items-center lg:mr-3">
       <Image
         src={logo}
         alt="Branford Volunteers logo"
