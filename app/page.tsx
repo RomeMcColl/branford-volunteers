@@ -20,7 +20,7 @@ export default function Home() {
     <main className="flex flex-1 flex-col justify-center text-white">
       <Hero />
       <section className="flex flex-col items-center">
-        <div className="pb-6 pt-14">
+        <div id="did-you-know" className="pb-6 pt-14">
           <h2 className="mb-1 text-3xl text-branford-100 underline md:text-4xl">
             Did You Know?
           </h2>
