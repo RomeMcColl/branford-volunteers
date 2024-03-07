@@ -1,4 +1,5 @@
 import Hero from "./ui/home/hero";
+import Images from "./ui/home/images";
 import SearchBtn from "./ui/search-button";
 
 const categories = [
@@ -15,7 +16,7 @@ const categories = [
   "veterans",
 ];
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="flex flex-1 flex-col justify-center text-white">
       <Hero />
@@ -31,7 +32,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      {/* Images */}
+      <Images />
       <section className="flex flex-col items-center px-5 py-12">
         <div className="flex-1 rounded-xl border-2 p-3">
           <ul className="h-50 grid list-disc grid-cols-2 gap-x-7 gap-y-2 pl-5 text-lg sm:grid-cols-3 sm:gap-x-12 sm:text-xl md:text-2xl">
