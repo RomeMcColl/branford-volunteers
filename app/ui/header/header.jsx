@@ -10,20 +10,15 @@ import MobileSearch from "./mobile-search";
 export default function Header() {
   const maxWidth = useContext(MaxWidthContext);
 
-  const breakpoint = "lg";
-  const hideAt = `${breakpoint}:hidden`;
-  const displayAt = `${breakpoint}:flex`;
-  const headerHeight = `${breakpoint}:h-20`;
-
   return (
     <header className="bg-branford-600 text-branford-50 lg:px-3">
       <div
-        className={`mx-auto flex min-h-16 justify-between ${headerHeight} ${maxWidth}`}
+        className={`mx-auto flex min-h-16 justify-between lg:h-20 ${maxWidth}`}
       >
-        <MobileSearch hideAt={hideAt} />
+        <MobileSearch />
         <HomeLogo />
-        <MobileNav hideAt={hideAt} />
-        <DesktopNav displayAt={displayAt} />
+        <MobileNav />
+        <DesktopNav />
       </div>
     </header>
   );
