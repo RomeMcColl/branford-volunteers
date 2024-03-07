@@ -1,7 +1,12 @@
+import Link from "next/link";
+
 export default function SearchBtn() {
   return (
-    <button type="button" className="flex-1 rounded-lg bg-red-600 p-3 text-xl">
+    <Link
+      href="/"
+      className="text-nowrap rounded-lg bg-red-600 px-10 py-3 text-center text-xl sm:self-center"
+    >
       Start Your Search
-    </button>
+    </Link>
   );
 }

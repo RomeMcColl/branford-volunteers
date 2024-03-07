@@ -32,35 +32,34 @@ export default function Home() {
         </div>
       </section>
       {/* Images */}
-      <section className="flex flex-col items-center p-4">
+      <section className="flex flex-col items-center px-5 py-12">
         <div className="flex-1 rounded-xl border-2 p-3">
           <ul className="h-50 grid list-disc grid-cols-2 gap-x-7 gap-y-2 pl-5 text-lg sm:grid-cols-3 sm:gap-x-12 sm:text-xl md:text-2xl">
             {categories.map((item) => (
-              <li className="" key={item}>
-                {item}
-              </li>
+              <li key={item}>{item}</li>
             ))}
-            <li className="">and more...</li>
+            <li>and more...</li>
           </ul>
         </div>
       </section>
-      <section className="bg-white p-4 text-branford-600">
-        <div className="flex gap-1 text-5xl font-semibold">
-          <p>&ldquo;</p>
-          <p className="w-52 text-3xl font-medium">
-            Service to others is the rent you pay for your room here on Earth.
-          </p>
-          <p className="self-end">&rdquo;</p>
+      <section className="bg-white p-6 text-branford-600">
+        <div className="mx-auto max-w-sm sm:max-w-xl">
+          <div className="flex gap-1 pl-2 text-5xl font-semibold">
+            <p>&ldquo;</p>
+            <p className="w-52 text-3xl font-medium sm:w-5/6">
+              Service to others is the rent you pay for your room here on Earth.
+            </p>
+            <p className="self-end">&rdquo;</p>
+          </div>
+          <p className="mt-2 text-right text-2xl font-medium">- Muhammad Ali</p>
         </div>
-        <p className="mt-3 text-right text-2xl font-medium">- Muhammad Ali</p>
       </section>
-      <section className="flex flex-col items-center justify-evenly gap-8 p-10 font-semibold sm:flex-row">
-        <p>
-          Whether you can give an hour, a day, <br />
-          or a lifetime, find your opportunity <br />
-          to give back to your community.
-        </p>
-        <div className="flex w-72">
+      <section className="flex justify-center  p-10">
+        <div className="flex flex-col justify-evenly gap-8 font-semibold sm:flex-row">
+          <p className="w-72">
+            Whether you can give an hour, a&nbsp;day, or a lifetime, find your
+            opportunity to&nbsp;give back to your community.
+          </p>
           <SearchBtn />
         </div>
       </section>
