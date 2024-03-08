@@ -23,6 +23,7 @@ module.exports = {
       backgroundImage: {
         "hero-wide": "url('/volunteers-hero.png')",
         "hero-vert": "url('/volunteers-vert.png')",
+        "about-hero-img": "url('/kid-with-jacket.jpg')",
       },
     },
   },
