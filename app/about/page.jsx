@@ -13,15 +13,22 @@ export default function Page() {
         </h2>
         <p>
           At BranfordVolunteers.Org, we are dedicated to bridging the gap
-          between eager volunteers and nonprofits in need. Our mission is to
-          cultivate a spirit of giving by connecting individuals with diverse
-          skills and talents to meaningful projects that make a positive impact.
+          between eager volunteers and local nonprofits in need of hands-on
+          support.
+        </p>
+        <p>
+          Our mission is to cultivate a spirit of giving by connecting
+          individuals of diverse talents to meaningful projects that make a
+          positive impact.
         </p>
         <p>
           As part of the Branford Community Foundation, we believe that everyone
           has the power to contribute to the greater good, and we strive to be
           the catalyst that transforms that belief into action.
         </p>
+        <h2 className="mx-auto my-5 max-w-96 text-balance text-center text-4xl">
+          Dozens of causes, just waiting for you
+        </h2>
         <p>
           Whether you&apos;re an individual looking to lend a helping hand or a
           nonprofit seeking dedicated volunteers, we provide a platform for
