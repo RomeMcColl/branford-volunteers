@@ -16,9 +16,9 @@ const categories = [
   "veterans",
 ];
 
-export default async function Home() {
+export default async function Page() {
   return (
-    <main className="flex flex-1 flex-col justify-center text-white">
+    <main className="flex flex-1 flex-col text-white">
       <Hero />
       <section className="flex flex-col items-center">
         <div id="did-you-know" className="pb-6 pt-14">

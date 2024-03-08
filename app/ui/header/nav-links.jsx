@@ -3,11 +3,11 @@ import { clsx } from "clsx";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { name: "Volunteer", href: "/#" },
-  { name: "Organizations", href: "/#" },
-  { name: "Calendar", href: "/#" },
-  { name: "About", href: "/#" },
-  { name: "Add your nonprofit", href: "/#" },
+  { name: "Volunteer", href: "/search" },
+  { name: "Organizations", href: "/organizations" },
+  { name: "Calendar", href: "/calendar" },
+  { name: "About", href: "/about" },
+  { name: "Add your nonprofit", href: "/nonprofit" },
 ];
 
 export default function NavLinks() {
