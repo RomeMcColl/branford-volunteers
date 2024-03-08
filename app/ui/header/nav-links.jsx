@@ -10,7 +10,7 @@ const links = [
   { name: "Add your nonprofit", href: "/nonprofit" },
 ];
 
-export default function NavLinks() {
+export default function NavLinks({ onClick }) {
   const pathname = usePathname();
   return (
     <>
@@ -19,8 +19,9 @@ export default function NavLinks() {
           key={link.name}
           href={link.href}
           className={clsx("flex-[0] text-xl xl:flex-initial", {
-            "text-red-500": pathname === link.href,
+            "underline underline-offset-4": pathname === link.href,
           })}
+          onClick={onClick}
         >
           {link.name}
         </Link>

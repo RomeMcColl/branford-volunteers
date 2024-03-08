@@ -20,7 +20,7 @@ export default function MobileNav() {
       {isOpen && (
         <div className="absolute left-0 flex w-full flex-col bg-branford-600">
           <nav className="flex flex-col gap-6 p-4">
-            <NavLinks />
+            <NavLinks onClick={handleClick} />
           </nav>
         </div>
       )}
