@@ -1,95 +1,69 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Hero from "./ui/home/hero";
+import Images from "./ui/home/images";
+import SearchBtn from "./ui/search-button";
 
-export default function Home() {
+const categories = [
+  "food insecurity",
+  "education",
+  "disabilities",
+  "environment",
+  "seniors",
+  "health care",
+  "public safety",
+  "child advocacy",
+  "housing",
+  "arts & culture",
+  "veterans",
+];
+
+export default async function Page() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
+    <main className="flex flex-1 flex-col text-white">
+      <Hero />
+      <section className="flex flex-col items-center">
+        <div id="did-you-know" className="pb-6 pt-14">
+          <h2 className="mb-1 text-3xl text-branford-100 underline md:text-4xl">
+            Did You Know?
           </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+          <p className="flex flex-col text-center text-lg md:text-xl">
+            <span>There are nearly 200</span>
+            <span>Branford-based</span>
+            <span>nonprofits.</span>
           </p>
-        </a>
-      </div>
+        </div>
+      </section>
+      <Images />
+      <section className="flex flex-col items-center px-5 py-12">
+        <div className="flex-1 rounded-xl border-2 p-3">
+          <ul className="h-50 grid list-disc grid-cols-2 gap-x-7 gap-y-2 pl-5 text-lg sm:grid-cols-3 sm:gap-x-12 sm:text-xl md:text-2xl">
+            {categories.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+            <li>and more...</li>
+          </ul>
+        </div>
+      </section>
+      <section className="bg-white p-6 text-branford-600">
+        <div className="mx-auto max-w-sm sm:max-w-xl">
+          <div className="flex gap-1 pl-2 text-5xl font-semibold">
+            <p>&ldquo;</p>
+            <p className="w-52 text-3xl font-medium sm:w-5/6">
+              Service to others is the rent you pay for your room here on Earth.
+            </p>
+            <p className="self-end">&rdquo;</p>
+          </div>
+          <p className="mt-2 text-right text-2xl font-medium">- Muhammad Ali</p>
+        </div>
+      </section>
+      <section className="flex justify-center  p-10">
+        <div className="flex flex-col justify-evenly gap-8 font-semibold sm:flex-row">
+          <p className="w-72">
+            Whether you can give an hour, a&nbsp;day, or a lifetime, find your
+            opportunity to&nbsp;give back to your community.
+          </p>
+          <SearchBtn />
+        </div>
+      </section>
     </main>
   );
 }
