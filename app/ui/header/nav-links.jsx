@@ -8,6 +8,7 @@ const links = [
   { name: "Calendar", href: "/calendar" },
   { name: "About", href: "/about" },
   { name: "Add your nonprofit", href: "/nonprofit" },
+  { name: "Login", href: '/nonprofit/login' }
 ];
 
 export default function NavLinks({ onClick }) {
