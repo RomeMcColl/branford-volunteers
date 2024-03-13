@@ -7,7 +7,7 @@ const links = [
   { name: "Organizations", href: "/organizations" },
   { name: "Calendar", href: "/calendar" },
   { name: "About", href: "/about" },
-  { name: "Add your nonprofit", href: "/nonprofit" },
+  { name: "Add your nonprofit", href: "/nonprofit/signup" },
   { name: "Login", href: '/nonprofit/login' }
 ];
 
